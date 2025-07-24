@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f0f0f0;
+}
+.traffic-light {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    background: #222;
+    padding: 32px 20px;
+    border-radius: 24px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.traffic-light div {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #555;
+    border: 3px solid #333;
+}
+#red { background: red; }
+#yellow { background: yellow; }
+#green { background: green; }
+
+.car {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.car-body {
+    width: 180px;
+    height: 54px;
+    background: linear-gradient(90deg, #3498db 80%, #2980b9 100%);
+    border-radius: 24px 36px 36px 36px / 32px 32px 40px 40px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.car-window {
+    position: absolute;
+    left: 36px;
+    top: 8px;
+    width: 42px;
+    height: 24px;
+    background: linear-gradient(120deg, #eaf6fb 80%, #b3d8e6 100%);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.car-window::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    width: 24px;
+    height: 6px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 4px;
+}
+.car-window.right {
+    left: 104px;
+}
+.car-wheel {
+    width: 34px;
+    height: 34px;
+    background: radial-gradient(circle at 12px 12px, #444 60%, #222 100%);
+    border-radius: 50%;
+    border: 4px solid #555;
+    position: absolute;
+    bottom: -16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.car-wheel.left {
+    left: 24px;
+}
+.car-wheel.right {
+    left: 124px;
+}
+/* Фары */
+.car-headlight {
+    position: absolute;
+    right: -16px;
+    top: 18px;
+    width: 16px;
+    height: 16px;
+    background: radial-gradient(circle, #fff700 60%, #e6c200 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 12px 4px #fff70088;
+    border: 2px solid #b3a100;
+}
+.car-taillight {
+    position: absolute;
+    left: -10px;
+    top: 22px;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #ff3c00 60%, #b30000 100%);
+    border-radius: 50%;
+    border: 2px solid #b30000;
+}
+/* Дверь и ручка */
+.car-door {
+    position: absolute;
+    left: 70px;
+    top: 10px;
+    width: 38px;
+    height: 34px;
+    border-radius: 10px 10px 16px 16px;
+    border: 2px solid #217dbb;
+    background: transparent;
+}
+.car-handle {
+    position: absolute;
+    left: 98px;
+    top: 28px;
+    width: 12px;
+    height: 4px;
+    background: #eaf6fb;
+    border-radius: 2px;
+    border: 1px solid #b3d8e6;
+}
+/* Бампер */
+.car-bumper {
+    position: absolute;
+    right: -22px;
+    bottom: 8px;
+    width: 18px;
+    height: 8px;
+    background: #888;
+    border-radius: 4px;
+    border: 2px solid #555;
+}
+</style>
+</head>
+<body>
+    <h1>Nimadur yasaber</h1>
+    <p>Bu sahifada nimadur yasabildi.</p>
+    <p>Bu sahifa metafor yasash uchun mo'ljallangan.</p>
+    <div class="traffic-light">
+        <div id="red"></div>
+        <div id="yellow"></div>
+        <div id="green"></div>
+    </div>
+        <div class="car">
+            <div class="car-body">
+                <div class="car-window"></div>
+                <div class="car-window right"></div>
+                <div class="car-door"></div>
+                <div class="car-handle"></div>
+                <div class="car-headlight"></div>
+                <div class="car-taillight"></div>
+                <div class="car-bumper"></div>
+                <div class="car-wheel left"></div>
+                <div class="car-wheel right"></div>
+            </div>
+        </div>
+</body>
+</html>
